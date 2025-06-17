@@ -1,0 +1,91 @@
+.pancard{
+    width:500px;
+    height: 281px ;
+    background-color: rgb(72, 195, 236);
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.img1{
+    width: 95px;
+    height: 60px;
+    background-image: url("../Assets/sjloga.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    margin-left: 230px;
+    margin-top: 10px;
+}
+.text1{
+    margin-top:-80px ;
+    margin-left:26px;
+}
+.text2{
+    margin-top:-20px ;
+    margin-left:6px;
+}
+.text3{
+    margin-top:-75px ;
+    margin-left:300px;
+}
+.text4{
+    margin-top:-20px ;
+    margin-left:300px;
+}
+.img2{
+     width: 81px;
+    height: 80px;
+    border:1px solid black;
+    background-image: url("../Assets/person.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    margin-left: 20px;
+    margin-top: -7px;
+}
+.text5{
+    margin-top:-105px;
+    margin-left:160px;
+}
+.text6{
+    margin-top:-18px;
+    margin-left:130px;
+}
+.text7{
+    margin-top:-18px;
+    margin-left:170px;
+}
+.img3{
+     width: 120px;
+    height: 120px;
+    border:1px solid black;
+    background-image: url("../Assets/scan.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    margin-left: 350px;
+    margin-top: -60px;
+}
+.text8{
+       margin-top:-78px;
+    margin-left:20px;
+}
+.text9{
+       margin-top:-28px;
+    margin-left:20px;
+}
+.text10{
+       margin-top:-28px;
+    margin-left:20px;
+}
+.text11{
+       margin-top:-28px;
+    margin-left:20px;
+}
+.text12{
+       margin-top:-28px;
+    margin-left:20px;
+}
+.text13{
+       margin-top:-28px;
+    margin-left:20px;
+}
