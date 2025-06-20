@@ -1,0 +1,28 @@
+ol{
+    background: #ff9999;
+  padding: 40px;
+}
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+  list-style-type:lower-greek;
+  list-style-position:inside;
+   /*list-style-image: url("./assets/sjloga.png");*/
+
+}
+/*ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}*/
+ul li::marker {
+  color: pink;
+  font-size: 25px;
+  list-style-position:inside;
+}
