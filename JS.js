@@ -56,6 +56,51 @@ var d=firstdigit;
 console.log("the reversed number are:",(a+b+c+d));
 
 
+var a=10;
+if(a<0){
+    console.log("the number is negative");
+}
+
+var a=10;
+if(a%2==0){
+    console.log("the number is even");
+}
+else{
+    console.log("the number is odd");
+}
+
+
+var a =10;
+var b=10;
+var c=10;
+var d=10;
+var e=10;
+var percentage=(a+b+c+d+e)*(100/5);
+if(percentage==50&&percentage>50){
+    console.log("Pass");
+}
+else{
+    console.log("fail")
+}
+
+
+var a=2024;
+if((a%4)||(a%100 && a%400)){
+    
+    console.log("this year is leap year");
+}
+
+var a=1200;
+if(a>=1000){
+    var a=a-(a*0.1);
+}
+console.log("the total expense is:",a);
+
+
+var s1=10;
+var s2=10;
+var s3=10;
+
 
 
 
