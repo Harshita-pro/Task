@@ -103,3 +103,64 @@ if(a>0){
 }else if(a<0){
       console.log("this is negative.");
 }
+
+//15.
+
+
+
+//17.
+var a=153;
+var temp=a;
+var num=0;
+while(a>0){
+    var n=a%10;
+    var num=Math.pow(n,3)+num;
+    var a=parseInt(a/10);
+}
+if(num==temp){
+    console.log("this",temp,"is a armstrong number.");
+}else{
+    console.log("this",temp,"is not a armstrong number.");
+}
+
+//21.
+//i)
+for(var i=0;i<5;i++){
+    for(var j=0;j<10;j++){
+        console.log("*");
+    }
+}
+//ii)
+for(var i=1;i<6;i++){
+    for(var j=1;j<=i;j++){
+        console.log("*");
+    }
+}
+
+//iii)
+for(var i=0;i<5;i++){
+    for(var j=0;j<(5-i-1);j++){
+       console.log(" ");
+    }
+    for(var j=0;j<(2*i+1);j++){
+        console.log("*");
+    }
+    for(var j=0;j<(5-i-1);j++){
+       console.log(" ");
+    }
+}
+//iv)
+for(var i=1;i<=5;i++){
+    for(var j=1;j<=(5-i-1);j++){
+       console.log(" ");
+    }
+    for(var j=1;j<=(2*i+1);j++){
+        console.log("i");
+    }
+    for(var j=1;j<=(5-i-1);j++){
+       console.log(" ");
+    }
+}
+
+
+
