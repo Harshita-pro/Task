@@ -288,6 +288,10 @@ if((side1+side2)>side3){
 }
 
 
+//1.
+for(var i=1;i<10;i++){
+    console.log(" ",i)
+}
 
 
 
