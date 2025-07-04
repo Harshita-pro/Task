@@ -5,20 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .verification{
-            visibility: hidden;
+        .error{
+            color: red;
+            font-size: 14px;
+        }
+        .success{
+            color:green;
         }
     </style>
 </head>
 <body>
-    <form action="" id="my form">
-    <input type="text" id ="firstname" placeholder="Enter First name"> <br>
-    <input type="text" id ="lastname" placeholder="Enter Last name"> <br>
-    <input type="text" id ="number" placeholder="Enter mobile no."> <br>
-    <input type="text" id ="email" placeholder="Enter email"> <br>
-    <input type="text" id ="password" placeholder="Enter password"><br>
+    
+    <form id="my form">
+        <h1>User registeration</h1>
+      
+    First Name:  <input type="text" id ="firstname" placeholder="Enter First name"> <br>
+    <span class="error" id="firstnameError"></span> <br>
+    
+     
+    Last Name :  <input type="text" id ="lastname" placeholder="Enter Last name"> <br>
+    <span class="error" id="lastnameError"></span> <br>
+
+    Mobile No.:  <input type="text" id ="mobile" placeholder="Enter mobile no."> <br>
+    <span class="error" id="mobileError"></span> <br>
+
+    Email     :  <input type="text" id ="email" placeholder="Enter email"> <br>
+    <span class="error" id="emailError"></span> <br>
+
+    Password  :  <input type="text" id ="password" placeholder="Enter password"><br>
+    <span class="Error" id="passwordError"></span>
+
+    <ul>
+      <li id="lowerCase" class="invalid">At least one lowercase letter</li>
+      <li id="upperCase" class="invalid">At least one uppercase letter</li>
+      <li id="number" class="invalid">At least one number</li>
+      <li id="specialChar" class="invalid">At least one special character</li>
+    </ul><br>
+    
     <button type="submit">Submit</button>
     </form>
     
+
+    <p id="finalmessage"></p>
+     <script src="form.js"></script>
+
 </body>
 </html>

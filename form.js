@@ -1,76 +1,68 @@
-function checkfirstname(){
-    var fn = document.getElementById("firstname").value;
-    var length = fn.length;
-    console.log(length);
+  document.getElementById("password").addEventListener("input", function () {
+      var password = this.value;
 
-    var upper =/[A-Z]/;
-    var lower =/[a-z]/;
-}
-function checklastname(){
-    var ln=document.getElementById("lastname").value;
-    var length = ln.length;
-    console.log(length);
-    
-}
-function checknumber(){
-    var num =document.getElementById("number").value;
-    var length = num.length;
-    console.log(length);
+      var Lower = /[a-z]/.test(password);
+      var Upper = /[A-Z]/.test(password);
+      var Number = /[0-9]/.test(password);
+      var Special = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
-    if(length ==10){
-        document.getElementById("length").textContent ="strong";
-    }else{
-        document.getElementById("number").style.visibility = "visible";
-    }
-    var number =/[0-9]/;
-    document.getElementById("number").style.color = number.test(pass) ? "blue" : "red";
+      document.getElementById("lowerCase").className = Lower ? "valid" : "invalid";
+      document.getElementById("upperCase").className = Upper ? "valid" : "invalid";
+      document.getElementById("number").className = Number ? "valid" : "invalid";
+      document.getElementById("specialChar").className = Special ? "valid" : "invalid";
+    });
+ 
+ document.getElementById("myform").addEventListener("submit", function(e){
+ e.preventDefault();
 
-}
-function checkemail(){
-    var em =document.getElementById("email").value;
-    var length = em.length;
-    console.log(length);
-    if(length>0){
-        document.getElementById("com").style.visibility = "visible";
-        document.getElementById("special").style.visibility = "visible";
-    }
-    var com=/[gmail.com]/;
-    var special =/[@]/;
-    document.getElementById("com").style.color = number.test(pass) ? "blue" : "red";
-    document.getElementById("special").style.color = special.test(pass) ? "blue" : "red";
+ var firstname=document.getElementById("firstname").value;
+ var lastname=document.getElementById("lastname").value;
+ var mobile=document.getElementById("mobile").value;
+ var email=document.getElementById("email").value;
+ var password=document.getElementById("password").value;
 
-}
+document.getElementById("firstNameError").textContent = "";
+document.getElementById("lastNameError").textContent = "";
+document.getElementById("mobileError").textContent = "";
+document.getElementById("emailError").textContent = "";
+document.getElementById("passwordError").textContent = "";
+
+var isValid = true;
+
+      
+      if (fname.length < 4) {
+        document.getElementById("firstNameError").textContent = "First name must be at least 4 characters.";
+        isValid = false;
+      }
+
+      if (lname === "") {
+        document.getElementById("lastNameError").textContent = "Last name is required.";
+        isValid = false;
+      }
+
+      if (mobile.length!==10) {
+        document.getElementById("mobileError").textContent = "Mobile number must be exactly 10 digits.";
+        isValid = false;
+      }
+
+      if (!email.includes("@") || !email.includes(".co")) {
+        document.getElementById("emailError").textContent = "Email must contain '@' and '.co'.";
+        isValid = false;
+      }
+      var Lower = /[a-z]/.test(password);
+      var Upper = /[A-Z]/.test(password);
+      var Number = /[0-9]/.test(password);
+      var Special = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+      if (!Lower || !Upper || !Number || !Special) {
+        document.getElementById("passwordError").textContent = "Password must satisfy all 4 conditions above.";
+        isValid = false;
+      }
+    if (isValid) {
+        const msg = document.getElementById("finalMessage");
+        msg.textContent = "Registration successful!";
+        msg.className = "success";
+      }
+    });
 
 
-function checkPassword(){
-    var pass = document.getElementById("password").value;
-    var length = pass.length;
-    console.log(length);
-    if(length<8){
-        document.getElementById("length").textContent = "weak";
-        document.getElementById("capital").style.visibility = "hidden";
-        document.getElementById("small").style.visibility = "hidden";
-        document.getElementById("number").style.visibility = "hidden";
-        document.getElementById("spchar").style.visibility = "hidden";
-
-    }
-    else if(length>=8 && length<12){
-        document.getElementById("length").textContent = "medium";
-        document.getElementById("capital").style.visibility = "visible";
-        document.getElementById("small").style.visibility = "visible";
-        document.getElementById("number").style.visibility = "visible";
-        document.getElementById("spchar").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("length").textContent = "strong";
-    }
-    var upper =/[A-Z]/;
-    var lower =/[a-z]/;
-    var number =/[0-9]/;
-    var special =/[!@#$%^&*(),.?":{}|<>]/;
-
-    document.getElementById("capital").style.color = upper.test(pass) ? "blue" : "red";
-    document.getElementById("small").style.color = lower.test(pass) ? "blue" : "red";
-    document.getElementById("number").style.color = number.test(pass) ? "blue" : "red";
-    document.getElementById("spchar").style.color = special.test(pass) ? "blue" : "red";
-}
